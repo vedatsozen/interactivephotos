@@ -1,0 +1,169 @@
+
+body {
+    text-align: center;
+    padding:0;
+    margin:0;
+    background-image:url('images/bir.jpg');  
+    background-size:100% 100% !important;
+    background-repeat:no-repeat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height:100vh !important;
+    overflow: hidden;
+    border:10px solid black;
+ 
+}
+
+
+* {
+    box-sizing: border-box !important;
+
+}
+
+#photos {
+    height:100px;
+    width:300px;
+    position: absolute;
+    bottom:5%;
+    left:50%;
+    transform:translate(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+
+}
+
+.photo {
+    height: 100%;
+    width:33.33%;
+    border:2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.photo:hover {
+    box-shadow:0 0 10px black;
+    transition:300ms ease;
+}
+
+.photo:active {
+    transform:translateY(10px);
+}
+
+.photo > img {
+    height:100%;
+    width:100%;
+}
+
+.text {
+  
+    font-size:60px;
+    letter-spacing: 4px;
+    display: block;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top:15%;
+    left:50%;
+    transform:translate(-50%);
+    padding:15px !important;
+  
+}
+
+.text2 {
+ 
+    font-size:15px;
+    letter-spacing: 4px;
+    display: block;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%);
+    padding:15px !important;
+  
+}
+
+.btn {
+   
+    font-size:13px;
+    letter-spacing: 4px;
+    display: block;
+    background-color: orangered;
+    color: white;
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform:translate(-50%);
+    padding:15px !important;
+    border:none;
+    border-radius:5px;
+  
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: orange;
+    transition:300ms ease;
+}
+
+.btn:active {
+    top:61%;
+}
+
+#detail1 {
+    display:none;
+    background-color: bisque;
+    color: black;
+    padding: 25px !important;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 3px;
+    border: 3px solid black;
+}
+
+#detail2 {
+    display:none;
+    background-color: bisque;
+    color: black;
+    padding: 25px !important;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 3px;
+}
+
+#detail3 {
+    display:none;
+    background-color: bisque;
+    color: black;
+    padding: 25px !important;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 3px;
+}
+
+button#close1, button#close2, button#close3 {
+    padding: 5px !important;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 5px;
+    border: none;
+}
+
+button#close1:active, button#close2:active, button#close3:active {
+    transform: scale(0.9);
+}
+
+
+
+
+

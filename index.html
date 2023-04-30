@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY PRATİĞİ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  
+</head>
+
+<body>
+
+<div id="photos">
+
+    <div id="photo1" class="photo"><img src="images/bir.jpg"></div>
+    <div id="photo2" class="photo"><img src="images/iki.jpg"></div>
+    <div id="photo3" class="photo"><img src="images/uc.jpg"></div>
+
+</div>
+
+<h1 class="text"></h1>
+<h1 class="text2"></h1>
+<button class="btn"></button>
+<div id="detail1">
+    <p>
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <button id="close1">Close</button>
+</div>
+<div id="detail2">
+    <p>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+    </p>
+    <button id="close2">Close</button>
+</div>
+<div id="detail3">
+    <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+    </p>
+    <button id="close3">Close</button>
+</div>
+
+</body>
+
+<script>
+
+$(document).ready(function() {
+
+let fotosrc1 = $(this).find("img").attr("src");
+$("body").css({"background-image":"url(" + fotosrc1 + ")","transition":"2s ease"});
+$("body").css({"background-size":"100% 100%"});
+$("body").css({"background-repeat":"no-repeat"});
+$(".text").text("First Photo");
+$(".text2").text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+$(".btn").text("Explore");
+
+$("#photo1").click(function() {
+let fotosrc1 = $(this).find("img").attr("src");
+$("body").css({"background-image":"url(" + fotosrc1 + ")","transition":"2s ease"});
+$("body").css({"background-size":"100% 100%"});
+$("body").css({"background-repeat":"no-repeat"});
+$(".text").text("first Photo");
+$(".text2").text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+$(".btn").text("Explore");
+$("#detail2").hide();
+$("#detail3").hide();
+});
+
+$("#photo2").click(function() {
+let fotosrc2 = $(this).find("img").attr("src");
+$("body").css({"background-image":"url(" + fotosrc2 + ")","transition":"2s ease"});
+$("body").css({"background-size":"100% 100%"});
+$("body").css({"background-repeat":"no-repeat"});
+$(".text").text("Second Photo");
+$(".text2").text("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.");
+$(".btn").text("Learn");
+$("#detail1").hide();
+$("#detail3").hide();
+});
+
+$("#photo3").click(function() {
+let fotosrc3 = $(this).find("img").attr("src");
+$("body").css({"background-image":"url(" + fotosrc3 + ")","transition":"2s ease"});
+$("body").css({"background-size":"100% 100%"});
+$("body").css({"background-repeat":"no-repeat"});
+$(".text").text("Third Photo");
+$(".text2").text("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,");
+$(".btn").text("Practice");
+$("#detail1").hide();
+$("#detail2").hide();
+});
+
+$('.btn').click(function() {
+  var buttonText = $(this).text();
+  if (buttonText === 'Explore') {
+    $("#detail1").show();
+  } else if (buttonText === 'Learn') {
+    $("#detail2").show();
+  } else if (buttonText === 'Practice') {
+    $("#detail3").show();
+  }
+});
+
+
+$("#close1").click(function() {
+$("#detail1").hide();
+})
+
+$("#close2").click(function() {
+$("#detail2").hide();
+})
+
+$("#close3").click(function() {
+$("#detail3").hide();
+})
+
+});
+
+</script>
+</html>
